@@ -8,19 +8,14 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 
-public class Ray extends AbstractAnimal implements CartilaginousFish
-{
-	@Override
-	public List<String> getParentCharacteristics() {
-		List<String> characteristics = CartilaginousFish.super.getCharacteristics();
-		characteristics.addAll(asList("They are flattened", "They have five gill openings"));
-		return characteristics;
-	}
+public class Ray extends AbstractAnimal implements CartilaginousFish {
+    @Override
+    public List<String> getParentCharacteristics() {
+        return CartilaginousFish.super.getCharacteristics();
+    }
 
-	@Override
-	public void populateCharacteristics(List<String> characteristics) {
-
-	}
-
-
+    @Override
+    public void populateCharacteristics(List<String> characteristics) {
+        characteristics.addAll(asList("They are flattened", "They have five gill openings"));
+    }
 }

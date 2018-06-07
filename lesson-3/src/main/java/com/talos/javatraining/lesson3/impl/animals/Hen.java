@@ -6,19 +6,16 @@ import com.talos.javatraining.lesson3.impl.AbstractAnimal;
 import java.util.List;
 
 
-public class Hen extends AbstractAnimal implements Bird
-{
-	@Override
-	public List<String> getParentCharacteristics() {
-		List<String> characteristics = Bird.super.getCharacteristics();
-		characteristics.add("They don't fly");
-		return characteristics;
-	}
+public class Hen extends AbstractAnimal implements Bird {
+    @Override
+    public List<String> getParentCharacteristics() {
+        return Bird.super.getCharacteristics();
+    }
 
-	@Override
-	public void populateCharacteristics(List<String> characteristics) {
-
-	}
+    @Override
+    public void populateCharacteristics(List<String> characteristics) {
+        characteristics.add("They don't fly");
+    }
 
 
 }

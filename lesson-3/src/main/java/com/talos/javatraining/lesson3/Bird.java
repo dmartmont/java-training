@@ -7,10 +7,9 @@ import static java.util.Arrays.asList;
 
 public interface Bird extends Animal {
 
-    default List<String> getCharacteristics()
-	{
-		List<String> characteristics = new ArrayList<>();
-		characteristics.addAll(asList("Coat of feathers", "Warm-blooded metabolisms"));
-		return characteristics;
-	}
+    default List<String> getCharacteristics() {
+        List<String> characteristics = new ArrayList<>();
+        characteristics.addAll(asList("Coat of feathers", "Warm-blooded metabolisms"));
+        return characteristics;
+    }
 }
