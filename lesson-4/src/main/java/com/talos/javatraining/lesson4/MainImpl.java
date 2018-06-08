@@ -69,7 +69,7 @@ public class MainImpl implements Main {
                 .map(collection -> getAddress(collection, value -> BooleanUtils.isTrue(value.getContactAddress())))
                 .map(AddressModel::getCountry)
                 .map(CountryModel::getIsocode)
-                .orElse("CA");
+                .orElseGet(this::inferCountry);
     }
 
     @Override
